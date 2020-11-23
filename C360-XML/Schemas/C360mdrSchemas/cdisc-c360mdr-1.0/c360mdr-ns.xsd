@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<xs:schema targetNamespace = "https://www.cdisc.org/ns/mdr/c360"
+        xmlns:xs = "http://www.w3.org/2001/XMLSchema"
+        xmlns:odm = "http://www.cdisc.org/ns/odm/v1.3"
+        xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"
+        xmlns:def = "http://www.cdisc.org/ns/def/v2.1"
+        xmlns:xlink = "http://www.w3.org/1999/xlink"
+        elementFormDefault = "qualified" attributeFormDefault = "unqualified">
+
+  <!--
+      CDISC 360 Project MDR 1.0.0 mdr-ns schema
+      as developed by the CDISC C360 WS2 Sub-Team
+  -->
+
+    <xs:import namespace = "http://www.w3.org/1999/xlink"     schemaLocation = "../core/xlink.xsd"/>
+    <xs:import namespace = "http://www.cdisc.org/ns/odm/v1.3" schemaLocation = "../cdisc-odm-1.3.2/ODM1-3-2-foundation.xsd"/>
+    <xs:import namespace = "http://www.cdisc.org/ns/def/v2.1" schemaLocation = "../cdisc-define-2.1/define-ns.xsd"/>
+    
+
+    <xs:element name = "InputVariables">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref = "mdr:InputVariable" minOccurs = "1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name = "InputVariable">
+        <xs:complexType>
+            <xs:attribute name = "SourceStandard" use = "optional" type = "odm:oid"/>
+            <xs:attribute name = "Domain" use = "optional" type = "odm:text"/>
+            <xs:attribute name = "Dataset" use = "optional" type = "odm:text"/>
+            <xs:attribute name = "VarName" use = "required" type="odm:text"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:attribute name="Core" type="odm:text">
+        <xs:annotation><xs:documentation>One of Required, Expected, Permissionable for SDTM. Wil need update for ADaM.</xs:documentation></xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="Preferred" type="odm:text">
+        <xs:annotation><xs:documentation>One of Yes, No.</xs:documentation></xs:annotation>
+    </xs:attribute>
+    
+</xs:schema>

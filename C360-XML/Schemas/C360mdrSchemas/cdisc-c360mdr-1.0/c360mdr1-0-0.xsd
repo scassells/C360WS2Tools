@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" 
+           xmlns="http://www.cdisc.org/ns/odm/v1.3"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:def="http://www.cdisc.org/ns/def/v2.1"
+           xmlns:mdr = "https://www.cdisc.org/ns/mdr/c360"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!--
+      CDISC 360 Project  C360mdr 1-0-0 schema
+      as developed by the CDISC C360 WS 2 team
+  -->
+
+    <xs:include  schemaLocation="C360mdr-extension.xsd"/>
+
+</xs:schema>

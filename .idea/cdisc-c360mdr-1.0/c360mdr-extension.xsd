@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" 
+           xmlns="http://www.cdisc.org/ns/odm/v1.3"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+           
+  <xs:import namespace="https://www.cdisc.org/ns/mdr/c360" schemaLocation="C360mdr-ns.xsd"/>
+      
+    <xs:redefine schemaLocation="../cdisc-define-2.1/define-extension.xsd">
+
+
+      <xs:group name="MethodDefElementExtension">
+        <xs:sequence>
+          <xs:group ref="MethodDefElementExtension"/>
+          <xs:group ref="MethodDefElementContents"/>
+        </xs:sequence>
+      </xs:group>
+      
+      <xs:attributeGroup name="CodeListAttributeExtension">
+        <xs:attributeGroup ref="CodeListAttributeExtension"/>
+        <xs:attribute ref="mdr:Subset" use="optional"/>
+      </xs:attributeGroup>
+      
+      <xs:attributeGroup name="MethodDefAttributeExtension">
+        <xs:attributeGroup ref="MethodDefAttributeExtension"/>
+        <xs:attribute ref="mdr:Preferred" use="required"/>
+      </xs:attributeGroup>
+      
+      <xs:attributeGroup name="ItemRefAttributeExtension">
+        <xs:attributeGroup ref="ItemRefAttributeExtension"/>
+        <xs:attribute ref="mdr:Core" use="optional"/>
+        <xs:attribute ref="mdr:AltMethodOID" use="optional"/>
+      </xs:attributeGroup>
+   
+    </xs:redefine>
+
+  <xs:group name="MethodDefElementContents">
+      <xs:sequence>
+        <xs:element ref="mdr:InputVariables" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:group>
+
+    
+</xs:schema>
