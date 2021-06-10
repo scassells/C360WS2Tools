@@ -1,0 +1,300 @@
+{
+    "STUDYID": {
+        "MappingType": "Assigned",
+        "Description": "Set to CDISC360-2.",
+        "MappedValue": "CDISC360-2"
+    },
+    "DOMAIN": {
+        "MappingType": "Assigned",
+        "Description": "Set to DM.",
+        "MappedValue": "DM"
+    },
+    "SUBJID": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.SUBJID",
+        "SourceVar": "CDASH-DM.SUBJID"
+    },
+    "USUBJID": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Concatenation of STUDYID, SITEID  and SUBJID",
+                "InputVariables": [
+                    {
+                        "Standard": "SDTM",
+                        "Domain": "DM",
+                        "VarName": "USUBJID"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "SITEID": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.SITEID",
+        "SourceVar": "CDASH-DM.SITEID"
+    },
+    "INVID": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from SDTM-DM.INVID",
+        "SourceVar": "SDTM-DM.INVID"
+    },
+    "INVNAM": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from SDTM-DM.INVNAM",
+        "SourceVar": "SDTM-DM.INVNAM"
+    },
+    "DMDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert Date of Demographics Collection (DMDAT) to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "DMDAT"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "DMDY": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "DMDAT -  RFSTDTC + 1 if DMDAT is on or after RFSTDTC\nDMDAT -  RFSTDTC if DMDAT precedes RFSTDTC",
+                "InputVariables": [
+                    {
+                        "Standard": "SDTM",
+                        "Domain": "DM",
+                        "VarName": "DMDAT"
+                    },
+                    {
+                        "Standard": "SDTM",
+                        "Domain": "DM",
+                        "VarName": "RFSTDTC"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "RFICDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert Informed Consent Date/Time  ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "RFICDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "RFICTIM"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "RFSTDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert Start Date/Time  of Treatment  to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECSTDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECSTTIM"
+                    }
+                ],
+                "Preferred": "Yes"
+            },
+            {
+                "Description": "Convert Informed Consent Date/Time  to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "RFICDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "RFICTIM"
+                    }
+                ],
+                "Preferred": "No"
+            }
+        ]
+    },
+    "RFENDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert End Date/Time of Treatment  to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECENDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECENTIM"
+                    }
+                ],
+                "Preferred": "Yes"
+            },
+            {
+                "Description": "Convert Disposition Event Start Date/Time to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DS",
+                        "VarName": "DSSTDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DS",
+                        "VarName": "DSSTTIM"
+                    }
+                ],
+                "Preferred": "No"
+            }
+        ]
+    },
+    "RFXSTDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert Start Date/Time  of Treatment to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECSTDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECSTTIM"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "RFXENDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert End Date/Time of Treatment to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECENDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECENTIM"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "RFPENDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Or date of last Assessment/Procedure/Event",
+                "InputVariables": [
+                    {
+                        "Standard": "SDTM",
+                        "Domain": "SV",
+                        "VarName": "SVENDTC"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "BRTHDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert Birth Date (BRTHDAT) to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "BRTHDAT"
+                    },
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DM",
+                        "VarName": "BRTHTIM"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "DTHFL": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Value=\"Y\" When DSDECOD=\"Death\" ",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DS",
+                        "VarName": "DSDECOD"
+                    }
+                ],
+                "Preferred": "none"
+            }
+        ]
+    },
+    "AGE": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.AGE",
+        "SourceVar": "CDASH-DM.AGE"
+    },
+    "AGEU": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.AGEU",
+        "SourceVar": "CDASH-DM.AGEU"
+    },
+    "RACE": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.RACE",
+        "SourceVar": "CDASH-DM.RACE"
+    },
+    "SEX": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.SEX",
+        "SourceVar": "CDASH-DM.SEX"
+    },
+    "ETHNIC": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DM.ETHNIC",
+        "SourceVar": "CDASH-DM.ETHNIC"
+    }
+}

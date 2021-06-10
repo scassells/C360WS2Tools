@@ -1,0 +1,83 @@
+{
+    "STUDYID": {
+        "MappingType": "Assigned",
+        "Description": "Set to CDISC360-2.",
+        "MappedValue": "CDISC360-2"
+    },
+    "DOMAIN": {
+        "MappingType": "Assigned",
+        "Description": "Set to DS.",
+        "MappedValue": "DS"
+    },
+    "USUBJID": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Concatenation of STUDYID, SITEID  and SUBJID",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DS",
+                        "VarName": "SUBJID",
+                        "Value": "SUBJID"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "DSSTDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert Disposition Start Date/Time to ISO 8601 format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DS",
+                        "VarName": "DSSTTIM",
+                        "Value": "Disposition Start Time"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "DSCAT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DS.DSCAT",
+        "SourceVar": "CDASH-DS.DSCAT"
+    },
+    "DSSCAT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DS.DSSCAT",
+        "SourceVar": "CDASH-DS.DSSCAT"
+    },
+    "DSTERM": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DS.DSTERM",
+        "SourceVar": "CDASH-DS.DSTERM"
+    },
+    "DSDECOD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-DS.DSDECOD",
+        "SourceVar": "CDASH-DS.DSDECOD"
+    },
+    "EPOCH": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Set to collected value when DSCAT is 'DISPOSITION EVENT'",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "DS",
+                        "VarName": "DSCAT",
+                        "Value": "Epoch"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    }
+}

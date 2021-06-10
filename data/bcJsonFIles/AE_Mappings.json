@@ -1,0 +1,152 @@
+{
+    "STUDYID": {
+        "MappingType": "Assigned",
+        "Description": "Set to CDISC360-2.",
+        "MappedValue": "CDISC360-2"
+    },
+    "DOMAIN": {
+        "MappingType": "Assigned",
+        "Description": "Set to AE.",
+        "MappedValue": "AE"
+    },
+    "SITEID": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.SITEID",
+        "SourceVar": "CDASH-AE.SITEID"
+    },
+    "AETERM": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AETERM",
+        "SourceVar": "CDASH-AE.AETERM"
+    },
+    "AEDECOD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEDECOD",
+        "SourceVar": "CDASH-AE.AEDECOD"
+    },
+    "AEMODIFY": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEMODIFY",
+        "SourceVar": "CDASH-AE.AEMODIFY"
+    },
+    "AESTDTC": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESTDAT",
+        "SourceVar": "CDASH-AE.AESTDAT"
+    },
+    "AEENDTC": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEEDAT",
+        "SourceVar": "CDASH-AE.AEEDAT"
+    },
+    "AEENRF": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEENRF",
+        "SourceVar": "CDASH-AE.AEENRF"
+    },
+    "AELLT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AELLT",
+        "SourceVar": "CDASH-AE.AELLT"
+    },
+    "AELLTCD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AELLTCD",
+        "SourceVar": "CDASH-AE.AELLTCD"
+    },
+    "AEHLT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEHLT",
+        "SourceVar": "CDASH-AE.AEHLT"
+    },
+    "AEHLTCD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEHLTCD",
+        "SourceVar": "CDASH-AE.AEHLTCD"
+    },
+    "AEHLGT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEHLGT",
+        "SourceVar": "CDASH-AE.AEHLGT"
+    },
+    "AEHLGTCD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEHLGTCD",
+        "SourceVar": "CDASH-AE.AEHLGTCD"
+    },
+    "AEPTCD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEPTCD",
+        "SourceVar": "CDASH-AE.AEPTCD"
+    },
+    "AEPT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEPT",
+        "SourceVar": "CDASH-AE.AEPT"
+    },
+    "AEBDSYCD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEBDSYCD",
+        "SourceVar": "CDASH-AE.AEBDSYCD"
+    },
+    "AEBODSYS": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEBODSYS",
+        "SourceVar": "CDASH-AE.AEBODSYS"
+    },
+    "AESEV": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESEV",
+        "SourceVar": "CDASH-AE.AESEV"
+    },
+    "AESER": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESER",
+        "SourceVar": "CDASH-AE.AESER"
+    },
+    "AESMIE": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESMIE",
+        "SourceVar": "CDASH-AE.AESMIE"
+    },
+    "AESDISAB": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESDISAB",
+        "SourceVar": "CDASH-AE.AESDISAB"
+    },
+    "AESLIFE": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESLIFE",
+        "SourceVar": "CDASH-AE.AESLIFE"
+    },
+    "AESCONG": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESCONG",
+        "SourceVar": "CDASH-AE.AESCONG"
+    },
+    "AESHOSP": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESHOSP",
+        "SourceVar": "CDASH-AE.AESHOSP"
+    },
+    "AESDTH": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESDTH",
+        "SourceVar": "CDASH-AE.AESDTH"
+    },
+    "AESCAN": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESCAN",
+        "SourceVar": "CDASH-AE.AESCAN"
+    },
+    "AESOD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AESOD",
+        "SourceVar": "CDASH-AE.AESOD"
+    },
+    "AEOUT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-AE.AEOUT",
+        "SourceVar": "CDASH-AE.AEOUT"
+    }
+}

@@ -1,0 +1,277 @@
+{
+    "parent": "DS-sdtmig",
+    "prodVers": "sdtmig-3-2",
+    "DS_bcConcepts": [
+        {
+            "ordinal": 1,
+            "bcID": "BCDSProtocolMilestone",
+            "bcName": "ProtocolMilestone",
+            "bcLabel": "Protocol Milestone",
+            "bcTopicVar": "DSTERM",
+            "bcCond": "DSCAT EQ PROTOCOL_MILESTONE",
+            "_links": {
+                "sdtmig-topic": {
+                    "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSTERM",
+                    "title": "Reported Term for the Disposition Event",
+                    "type": "SDTM Dataset Variable"
+                }
+            },
+            "bcVarList": [
+                {
+                    "DEC": "DSSTDY",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSSTDY",
+                            "title": "Study Day of Start of Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "integer"
+                },
+                {
+                    "DEC": "DSTERM",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSTERM",
+                            "title": "Reported Term for the Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-DS.DSTERM",
+                        "SourceVar": "CDASH-DS.DSTERM"
+                    }
+                },
+                {
+                    "DEC": "DSDECOD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSDECOD",
+                            "title": "Standardized Disposition Term",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66727",
+                                "title": "Version-agnostic anchor resource for codelist C66727",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "RANDOMIZED; INFORMED CONSENT OBTAINED "},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-DS.DSDECOD",
+                        "SourceVar": "CDASH-DS.DSDECOD"
+                    }
+                },
+                {
+                    "DEC": "DSCAT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSCAT",
+                            "title": "Category for Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C74558",
+                                "title": "Version-agnostic anchor resource for codelist C74558",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "PROTOCOL MILESTONE (C74588)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-DS.DSCAT",
+                        "SourceVar": "CDASH-DS.DSCAT"
+                    }
+                },
+                {
+                    "DEC": "DSSTDTC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSSTDTC",
+                            "title": "Start Date/Time of Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "ISO 8601",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Convert Disposition Start Date/Time to ISO 8601 format.",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "DS",
+                                        "VarName": "DSSTTIM",
+                                        "Value": "Disposition Start Time"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "ordinal": 2,
+            "bcID": "BCDSDispositionEvent",
+            "bcName": "DispositionEvent",
+            "bcLabel": "DispositionEvent",
+            "bcTopicVar": "DSTERM",
+            "bcCond": "DSCAT EQ DISPOSITION_EVENT",
+            "_links": {
+                "sdtmig-topic": {
+                    "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSTERM",
+                    "title": "Reported Term for the Disposition Event",
+                    "type": "SDTM Dataset Variable"
+                }
+            },
+            "bcVarList": [
+                {
+                    "DEC": "DSSTDTC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSSTDTC",
+                            "title": "Start Date/Time of Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "ISO 8601",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Convert Disposition Start Date/Time to ISO 8601 format.",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "DS",
+                                        "VarName": "DSSTTIM",
+                                        "Value": "Disposition Start Time"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "DSTERM",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSTERM",
+                            "title": "Reported Term for the Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-DS.DSTERM",
+                        "SourceVar": "CDASH-DS.DSTERM"
+                    }
+                },
+                {
+                    "DEC": "DSSTDY",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSSTDY",
+                            "title": "Study Day of Start of Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "integer"
+                },
+                {
+                    "DEC": "DSCAT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSCAT",
+                            "title": "Category for Disposition Event",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C74558",
+                                "title": "Version-agnostic anchor resource for codelist C74558",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "DISPOSITION EVENT (C74590)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-DS.DSCAT",
+                        "SourceVar": "CDASH-DS.DSCAT"
+                    }
+                },
+                {
+                    "DEC": "EPOCH",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/EPOCH",
+                            "title": "Epoch",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C99079",
+                                "title": "Version-agnostic anchor resource for codelist C99079",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "SCREENIING(C48262);TREATMENT(C101526);FOLLOW-UP(C99158) "},
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Set to collected value when DSCAT is 'DISPOSITION EVENT'",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "DS",
+                                        "VarName": "DSCAT",
+                                        "Value": "Epoch"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "DSDECOD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/DS/variables/DSDECOD",
+                            "title": "Standardized Disposition Term",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66727",
+                                "title": "Version-agnostic anchor resource for codelist C66727",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "COMPLETED (C25250);OTHER(C17649);ADVERSE EVENT (C41331);DEATH (C28554)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-DS.DSDECOD",
+                        "SourceVar": "CDASH-DS.DSDECOD"
+                    }
+                }
+            ]
+        }
+    ]
+}

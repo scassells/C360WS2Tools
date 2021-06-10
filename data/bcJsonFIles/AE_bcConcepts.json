@@ -1,0 +1,560 @@
+{
+    "parent": "AE-sdtmig",
+    "prodVers": "sdtmig-3-2",
+    "AE_bcConcepts": [
+        {
+            "ordinal": 1,
+            "bcID": "BCAEAdverseEvent",
+            "bcName": "AdverseEvent",
+            "bcLabel": "Adverse Event",
+            "bcTopicVar": "AETERM",
+            "bcCond": "Adverse Event",
+            "_links": {
+                "sdtmig-topic": {
+                    "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AETERM",
+                    "title": "Reported Term for the Adverse Event",
+                    "type": "SDTM Dataset Variable"
+                }
+            },
+            "bcVarList": [
+                {
+                    "DEC": "AEPTCD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEPTCD",
+                            "title": "Preferred Term Code",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA Preferred Term Code"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEPTCD",
+                        "SourceVar": "CDASH-AE.AEPTCD"
+                    }
+                },
+                {
+                    "DEC": "AESMIE",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESMIE",
+                            "title": "Other Medically Important Serious Event",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESMIE",
+                        "SourceVar": "CDASH-AE.AESMIE"
+                    }
+                },
+                {
+                    "DEC": "AESDISAB",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESDISAB",
+                            "title": "Persist or Signif Disability/Incapacity",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESDISAB",
+                        "SourceVar": "CDASH-AE.AESDISAB"
+                    }
+                },
+                {
+                    "DEC": "AESTDTC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESTDTC",
+                            "title": "Start Date/Time of Adverse Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "datetime"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESTDAT",
+                        "SourceVar": "CDASH-AE.AESTDAT"
+                    }
+                },
+                {
+                    "DEC": "SUPPAE.QNAM.AETRTEM.QVAL",
+                    "ClibRef": {}
+                },
+                {
+                    "DEC": "AEBDSYSCD",
+                    "ClibRef": {},
+                    "CDVal": {"value": "MedDRA Body Sytem or Organ Class (C117040)"}
+                },
+                {
+                    "DEC": "AESLIFE",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESLIFE",
+                            "title": "Is Life Threatening",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESLIFE",
+                        "SourceVar": "CDASH-AE.AESLIFE"
+                    }
+                },
+                {
+                    "DEC": "AEDECOD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEDECOD",
+                            "title": "Dictionary-Derived Term",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA Preferred Term "},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEDECOD",
+                        "SourceVar": "CDASH-AE.AEDECOD"
+                    }
+                },
+                {
+                    "DEC": "AESEV",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESEV",
+                            "title": "Severity/Intensity",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66769",
+                                "title": "Version-agnostic anchor resource for codelist C66769",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "cdType": "enumerated",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESEV",
+                        "SourceVar": "CDASH-AE.AESEV"
+                    }
+                },
+                {
+                    "DEC": "AESCONG",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESCONG",
+                            "title": "Congenital Anomaly or Birth Defect",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESCONG",
+                        "SourceVar": "CDASH-AE.AESCONG"
+                    }
+                },
+                {
+                    "DEC": "AEHLGTCD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEHLGTCD",
+                            "title": "High Level Group Term Code",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA High Level Group Term Code"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEHLGTCD",
+                        "SourceVar": "CDASH-AE.AEHLGTCD"
+                    }
+                },
+                {
+                    "DEC": "AELLT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AELLT",
+                            "title": "Lowest Level Term",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA Lowest Level Term"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AELLT",
+                        "SourceVar": "CDASH-AE.AELLT"
+                    }
+                },
+                {
+                    "DEC": "AEENRF",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEENRF",
+                            "title": "End Relative to Reference Period",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66728",
+                                "title": "Version-agnostic anchor resource for codelist C66728",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "AEENRF (C66728)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEENRF",
+                        "SourceVar": "CDASH-AE.AEENRF"
+                    }
+                },
+                {
+                    "DEC": "AESER",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESER",
+                            "title": "Serious Event",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)N (C49487)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESER",
+                        "SourceVar": "CDASH-AE.AESER"
+                    }
+                },
+                {
+                    "DEC": "AEMODIFY",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEMODIFY",
+                            "title": "Modified Reported Term",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEMODIFY",
+                        "SourceVar": "CDASH-AE.AEMODIFY"
+                    }
+                },
+                {
+                    "DEC": "AEOUT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEOUT",
+                            "title": "Outcome of Adverse Event",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66768",
+                                "title": "Version-agnostic anchor resource for codelist C66768",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "AOUT (C66768)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEOUT",
+                        "SourceVar": "CDASH-AE.AEOUT"
+                    }
+                },
+                {
+                    "DEC": "AEPT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEPTCD",
+                            "title": "Preferred Term Code",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA Preferred Term"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEPT",
+                        "SourceVar": "CDASH-AE.AEPT"
+                    }
+                },
+                {
+                    "DEC": "AESHOSP",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESHOSP",
+                            "title": "Requires or Prolongs Hospitalization",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESHOSP",
+                        "SourceVar": "CDASH-AE.AESHOSP"
+                    }
+                },
+                {
+                    "DEC": "AETERM",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AETERM",
+                            "title": "Reported Term for the Adverse Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AETERM",
+                        "SourceVar": "CDASH-AE.AETERM"
+                    }
+                },
+                {
+                    "DEC": "AESDTH",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESDTH",
+                            "title": "Results in Death",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESDTH",
+                        "SourceVar": "CDASH-AE.AESDTH"
+                    }
+                },
+                {
+                    "DEC": "AESOD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESOD",
+                            "title": "Occurred with Overdose",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESOD",
+                        "SourceVar": "CDASH-AE.AESOD"
+                    }
+                },
+                {
+                    "DEC": "AEHLGT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEHLGT",
+                            "title": "High Level Group Term",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA High Level Group Term"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEHLGT",
+                        "SourceVar": "CDASH-AE.AEHLGT"
+                    }
+                },
+                {
+                    "DEC": "AEHLTCD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEHLTCD",
+                            "title": "High Level Term Code",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA High Level Term Code"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEHLTCD",
+                        "SourceVar": "CDASH-AE.AEHLTCD"
+                    }
+                },
+                {
+                    "DEC": "AE",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESEQ",
+                            "title": "Sequence Number",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    }
+                },
+                {
+                    "DEC": "AEHLT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEHLT",
+                            "title": "High Level Term",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA High Level Term"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEHLT",
+                        "SourceVar": "CDASH-AE.AEHLT"
+                    }
+                },
+                {
+                    "DEC": "AEACN",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEACN",
+                            "title": "Action Taken with Study Treatment",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66767",
+                                "title": "Version-agnostic anchor resource for codelist C66767",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "AEACN (C66767)"}
+                },
+                {
+                    "DEC": "AELLTCD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AELLTCD",
+                            "title": "Lowest Level Term Code",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA Lowest Level Term Code"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AELLTCD",
+                        "SourceVar": "CDASH-AE.AELLTCD"
+                    }
+                },
+                {
+                    "DEC": "AEBODSYS",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEBODSYS",
+                            "title": "Body System or Organ Class",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "MedDRA System Organ Class (C49449)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEBODSYS",
+                        "SourceVar": "CDASH-AE.AEBODSYS"
+                    }
+                },
+                {
+                    "DEC": "AESCAN",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AESCAN",
+                            "title": "Involves Cancer",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AESCAN",
+                        "SourceVar": "CDASH-AE.AESCAN"
+                    }
+                },
+                {
+                    "DEC": "AEENDTC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/AE/variables/AEENDTC",
+                            "title": "End Date/Time of Adverse Event",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "datetime"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-AE.AEEDAT",
+                        "SourceVar": "CDASH-AE.AEEDAT"
+                    }
+                }
+            ]
+        }
+    ]
+}

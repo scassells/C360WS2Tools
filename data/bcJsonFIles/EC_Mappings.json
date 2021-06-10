@@ -1,0 +1,291 @@
+{
+    "STUDYID": {
+        "MappingType": "Assigned",
+        "Description": "Set to CDISC360-2.",
+        "MappedValue": "CDISC360-2"
+    },
+    "DOMAIN": {
+        "MappingType": "Assigned",
+        "Description": "Set to EC.",
+        "MappedValue": "EC"
+    },
+    "SITEID": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.SITEID",
+        "SourceVar": "CDASH-EC.SITEID"
+    },
+    "EPOCH": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.EPOCH",
+        "SourceVar": "CDASH-EC.EPOCH"
+    },
+    "USUBJID": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Concatenation of STUDYID, SITEID  and SUBJID - populated only in SDTM DM",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "SUBJID",
+                        "Value": "Subject Identifier for the Study"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECTRT": {
+        "MappingType": "Assigned",
+        "Description": "Set to study-specific.",
+        "MappedValue": "study-specific"
+    },
+    "ECPRESP": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECPRESP",
+        "SourceVar": "CDASH-EC.ECPRESP"
+    },
+    "ECOCCUR": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "N/A when EC.ECMOOD='Scheduled'",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECOCCUR",
+                        "Value": "Exposure as Collected Occurrence"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECMOOD": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECMOOD",
+        "SourceVar": "CDASH-EC.ECMOOD"
+    },
+    "ECLOT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECLOT",
+        "SourceVar": "CDASH-EC.ECLOT"
+    },
+    "ECFAST": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Populated only when EC.ECMOOD='Performed'",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECFAST",
+                        "Value": "Exposure as Collected Fasting Status"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECDOSFRM": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECDOSFRM",
+        "SourceVar": "CDASH-EC.ECDOSFRM"
+    },
+    "ECSTDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Concatenate START DATE and TIME (ECSTDAT/ECSTTIM) and populate STDM variable EC.ECSTDTC in ISO8601 format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECSTTIM",
+                        "Value": "Exposure as Collected Start Time"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECENDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Concatenate END DATE and TIME (ECENDAT/ECENTIM) and populate STDM variable EC.ECENDTC in ISO8601 format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECENTIM",
+                        "Value": "Exposure as Collected End Time"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECSTDY": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "SDTM.EC.ECSTDTC - SDTM.DM.RFSTDTC + 1",
+                "InputVariables": [
+                    {
+                        "Standard": "SDTM ",
+                        "Domain": "DM",
+                        "VarName": "RFSTDTC",
+                        "Value": null
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECENDY": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "SDTM.EC.ECSENDTC - SDTM.DM.RFENDTC + 1",
+                "InputVariables": [
+                    {
+                        "Standard": "SDTM",
+                        "Domain": "DM",
+                        "VarName": "RFENDTC",
+                        "Value": null
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECDOSE": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "When EXDSTXT is numeric EC.ECDOSE=EXDSTXT",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECDSTXT",
+                        "Value": "Exposure as Collected Dose Description"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECDOSTXT": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "When EXDSTXT is text EC.ECDOSTXT=EXDSTXT",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECDSTXT",
+                        "Value": "Exposure as Collected Dose Description"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECDOSTOT": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Total daily dose of EC.ECTRT using units from EC.ECDOSU",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECDOSU",
+                        "Value": null
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECDOSU": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECDOSU",
+        "SourceVar": "CDASH-EC.ECDOSU"
+    },
+    "ECDOSFRQ": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECDOSFRQ",
+        "SourceVar": "CDASH-EC.ECDOSFRQ"
+    },
+    "ECROUTE": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECROUTE",
+        "SourceVar": "CDASH-EC.ECROUTE"
+    },
+    "ECDOSRGM": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECDOSRGM",
+        "SourceVar": "CDASH-EC.ECDOSRGM"
+    },
+    "ECADJ": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Used when adjustment is represented in EX. May be chosen from sponsor-defined list or free text.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECADJ",
+                        "Value": "Reason for Dose Adjustment"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "ECLOC": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECLOC",
+        "SourceVar": "CDASH-EC.ECLOC"
+    },
+    "ECLAT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECLAT",
+        "SourceVar": "CDASH-EC.ECLAT"
+    },
+    "ECDIR": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECDIR",
+        "SourceVar": "CDASH-EC.ECDIR"
+    },
+    "ECTPT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-EC.ECTPT",
+        "SourceVar": "CDASH-EC.ECTPT"
+    },
+    "ECTPTNUM": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Numeric version of EC.ECTPT",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "EC",
+                        "VarName": "ECTPT",
+                        "Value": "EC Planned Time Point Name"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    }
+}

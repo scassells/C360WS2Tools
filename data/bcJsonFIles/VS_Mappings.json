@@ -1,0 +1,100 @@
+{
+    "STUDYID": {
+        "MappingType": "Assigned",
+        "Description": "Set to CDISC360-2.",
+        "MappedValue": "CDISC360-2"
+    },
+    "DOMAIN": {
+        "MappingType": "Assigned",
+        "Description": "Set to VS.",
+        "MappedValue": "VS"
+    },
+    "USUBJID": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Concatenation of STUDYID, SITEID  and SUBJID",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "VS",
+                        "VarName": "SUBJID",
+                        "Value": "SUBJID"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "VISIT": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-VS.VISIT",
+        "SourceVar": "CDASH-VS.VISIT"
+    },
+    "VSDTC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert assessment date (VISDAT/VSDAT)  to ISO8601 date format.",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "VS",
+                        "VarName": "VISTIM",
+                        "Value": "Vital Signs Time"
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "VSORRESU": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-VS.WEIGHT_VSORRESU",
+        "SourceVar": "CDASH-VS.WEIGHT_VSORRESU"
+    },
+    "VSORRES": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-VS.WEIGHT_VSORRES",
+        "SourceVar": "CDASH-VS.WEIGHT_VSORRES"
+    },
+    "VSSTRESC": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Predecessor",
+                "InputVariables": [
+                    {
+                        "Standard": "SDTM",
+                        "Domain": "VS",
+                        "VarName": "VSSTRESN",
+                        "Value": null
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    },
+    "VSPOS": {
+        "MappingType": "Predecessor",
+        "Description": "Value copied from CDASH-VS.SYSBP_VSPOS",
+        "SourceVar": "CDASH-VS.SYSBP_VSPOS"
+    },
+    "VSSTRESN": {
+        "MappingType": "Computation",
+        "Methods": [
+            {
+                "Description": "Convert WEIGHT_VSORRES from WEIGHT_VSORRESU units to standard units",
+                "InputVariables": [
+                    {
+                        "Standard": "CDASH",
+                        "Domain": "VS",
+                        "VarName": "WEIGHT_VSORRES",
+                        "Value": null
+                    }
+                ],
+                "Preferred": "Yes"
+            }
+        ]
+    }
+}

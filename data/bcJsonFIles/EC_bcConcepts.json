@@ -1,0 +1,572 @@
+{
+    "parent": "EC-sdtmig",
+    "EC_bcConcepts": [
+        {
+            "ordinal": "1",
+            "bcID": "BCECECTRT",
+            "bcName": "ECTRT",
+            "bcLabel": "ECTRT-Human Insulin",
+            "bcTopicVar": "ECTRT",
+            "bcCond" : "ECTRT EQ Human Insulin",
+            "_links": {
+                "sdtmig-topic": {
+                    "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECTRT",
+                    "title": "Name of Treatment",
+                    "type": "SDTM Dataset Variable"
+                }
+            },
+            "bcVarList": [
+                {
+                    "DEC": "ECDOSTXT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDOSTXT",
+                            "title": "Dose Description",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "When EXDSTXT is text EC.ECDOSTXT=EXDSTXT",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECDSTXT",
+                                        "Value": "Exposure as Collected Dose Description"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "SUPPAE.QNAM.ECTRTCMP.QVAL",
+                    "ClibRef": {},
+                    "CDVal": {"value": "NY (C66742)"}
+                },
+                {
+                    "DEC": "EC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECSEQ",
+                            "title": "Sequence Number",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    }
+                },
+                {
+                    "DEC": "ECSTDY",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECSTDY",
+                            "title": "Study Day of Start of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "integer",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "SDTM.EC.ECSTDTC - SDTM.DM.RFSTDTC + 1",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "SDTM ",
+                                        "Domain": "DM",
+                                        "VarName": "RFSTDTC",
+                                        "Value": null
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECLAT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECLAT",
+                            "title": "Laterality",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C99073",
+                                "title": "Version-agnostic anchor resource for codelist C99073",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "RIGHT (C25228); LEFT (C25229)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECLAT",
+                        "SourceVar": "CDASH-EC.ECLAT"
+                    }
+                },
+                {
+                    "DEC": "ECMOOD",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECMOOD",
+                            "title": "Mood",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"subset": "SCHEDULED (C125937);PERFORMED (C38000) "},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECMOOD",
+                        "SourceVar": "CDASH-EC.ECMOOD"
+                    }
+                },
+                {
+                    "DEC": "ECROUTE",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECROUTE",
+                            "title": "Route of Administration",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66729",
+                                "title": "Version-agnostic anchor resource for codelist C66729",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "SUBCUTANEOUS (C38299)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECROUTE",
+                        "SourceVar": "CDASH-EC.ECROUTE"
+                    }
+                },
+                {
+                    "DEC": "ECLOT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECLOT",
+                            "title": "Lot Number",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECLOT",
+                        "SourceVar": "CDASH-EC.ECLOT"
+                    }
+                },
+                {
+                    "DEC": "ECDUR",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDUR",
+                            "title": "Duration of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "ISO 8601 duration"}
+                },
+                {
+                    "DEC": "ECSTDTC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECSTDTC",
+                            "title": "Start Date/Time of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "ISO 8601",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Concatenate START DATE and TIME (ECSTDAT/ECSTTIM) and populate STDM variable EC.ECSTDTC in ISO8601 format.",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECSTTIM",
+                                        "Value": "Exposure as Collected Start Time"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECDOSRGM",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDOSRGM",
+                            "title": "Intended Dose Regimen",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECDOSRGM",
+                        "SourceVar": "CDASH-EC.ECDOSRGM"
+                    }
+                },
+                {
+                    "DEC": "ECCAT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECCAT",
+                            "title": "Category of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text"
+                },
+                {
+                    "DEC": "ECENDTC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECENDTC",
+                            "title": "End Date/Time of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "ISO 8601",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Concatenate END DATE and TIME (ECENDAT/ECENTIM) and populate STDM variable EC.ECENDTC in ISO8601 format.",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECENTIM",
+                                        "Value": "Exposure as Collected End Time"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECDOSU",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDOSU",
+                            "title": "Dose Units",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C71620",
+                                "title": "Version-agnostic anchor resource for codelist C71620",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "U/mL (C77607)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECDOSU",
+                        "SourceVar": "CDASH-EC.ECDOSU"
+                    }
+                },
+                {
+                    "DEC": "ECDOSFRQ",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDOSFRQ",
+                            "title": "Dosing Frequency per Interval",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C71113",
+                                "title": "Version-agnostic anchor resource for codelist C71113",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "BID (C64496); QD (C25473); QOD (C64525)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECDOSFRQ",
+                        "SourceVar": "CDASH-EC.ECDOSFRQ"
+                    }
+                },
+                {
+                    "DEC": "ECADJ",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECADJ",
+                            "title": "Reason for Dose Adjustment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Used when adjustment is represented in EX. May be chosen from sponsor-defined list or free text.",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECADJ",
+                                        "Value": "Reason for Dose Adjustment"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECENDY",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECENDY",
+                            "title": "Study Day of End of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "integer",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "SDTM.EC.ECSENDTC - SDTM.DM.RFENDTC + 1",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "SDTM",
+                                        "Domain": "DM",
+                                        "VarName": "RFENDTC",
+                                        "Value": null
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECOCCUR",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECOCCUR",
+                            "title": "Occurrence",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "N (C49487);Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "N/A when EC.ECMOOD='Scheduled'",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECOCCUR",
+                                        "Value": "Exposure as Collected Occurrence"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECFAST",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECFAST",
+                            "title": "Fasting Status",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66742",
+                                "title": "Version-agnostic anchor resource for codelist C66742",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "N (C49487);Y (C49488)"},
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "Populated only when EC.ECMOOD='Performed'",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECFAST",
+                                        "Value": "Exposure as Collected Fasting Status"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECTPTREF",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECTPTREF",
+                            "title": "Time Point Reference",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text"
+                },
+                {
+                    "DEC": "ECDOSFRM",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDOSFRM",
+                            "title": "Dose Form",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C66726",
+                                "title": "Version-agnostic anchor resource for codelist C66726",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "INJECTION (C42946)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECDOSFRM",
+                        "SourceVar": "CDASH-EC.ECDOSFRM"
+                    }
+                },
+                {
+                    "DEC": "ECDOSE",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDOSE",
+                            "title": "Dose",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text",
+                    "origin": {
+                        "MappingType": "Computation",
+                        "Methods": [
+                            {
+                                "Description": "When EXDSTXT is numeric EC.ECDOSE=EXDSTXT",
+                                "InputVariables": [
+                                    {
+                                        "Standard": "CDASH",
+                                        "Domain": "EC",
+                                        "VarName": "ECDSTXT",
+                                        "Value": "Exposure as Collected Dose Description"
+                                    }
+                                ],
+                                "Preferred": "Yes"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "DEC": "ECLOC",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECLOC",
+                            "title": "Location of Dose Administration",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C74456",
+                                "title": "Version-agnostic anchor resource for codelist C74456",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"subset": "ARM (C32141); THIGH (C33763); ABDOMINAL REGION (C139186)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECLOC",
+                        "SourceVar": "CDASH-EC.ECLOC"
+                    }
+                },
+                {
+                    "DEC": "ECTRT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECTRT",
+                            "title": "Name of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "CDVal": {"value": "Human Insulin"},
+                    "origin": {
+                        "MappingType": "Assigned",
+                        "Description": "Set to study-specific.",
+                        "MappedValue": "study-specific"
+                    }
+                },
+                {
+                    "DEC": "ECCAT",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECCAT",
+                            "title": "Category of Treatment",
+                            "type": "SDTM Dataset Variable"
+                        }
+                    },
+                    "cdType": "text"
+                },
+                {
+                    "DEC": "ECDIR",
+                    "ClibRef": {
+                        "self": {
+                            "href": "/mdr/sdtmig/3-2/datasets/EC/variables/ECDIR",
+                            "title": "Directionality",
+                            "type": "SDTM Dataset Variable"
+                        },
+                        "codelist": [
+                            {
+                                "href": "/mdr/root/ct/sdtmct/codelists/C99074",
+                                "title": "Version-agnostic anchor resource for codelist C99074",
+                                "type": "Root Value Domain"
+                            }
+                        ]
+                    },
+                    "CDVal": {"value": "UPPER (C25355)"},
+                    "origin": {
+                        "MappingType": "Predecessor",
+                        "Description": "Value copied from CDASH-EC.ECDIR",
+                        "SourceVar": "CDASH-EC.ECDIR"
+                    }
+                }
+            ]
+        }
+    ]
+}
