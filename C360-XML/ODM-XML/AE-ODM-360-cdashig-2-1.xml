@@ -1,0 +1,307 @@
+<?xml version="1.0" ?>
+<ODM xmlns:mdr="https://www.cdisc.org/ns/mdr/c360" xmlns="http://www.cdisc.org/ns/odm/v1.3" CreationDateTime="2020-08-19T17:35:46.464674" FileOID="[CDISC LIBRARY- cdashig-2-1]" FileType="Snapshot">
+    <Study OID="[C360.Library.Example.cdashig-2-1]">
+        <GlobalVariables>
+            <StudyName>AE CDISC 360 Data Collection Requirements</StudyName>
+            <StudyDescription>CLIB BC Examples</StudyDescription>
+            <ProtocolName>C360 WS1 BC Listing</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="CDISCLIB.cdashig-2-1" Name="CDISC 360 Library MetaData" Description="cdashig-2-1">
+            <FormDef OID="FRM.BCAEAdverse Event" Name="Adverse Event Form" Repeating="Yes">
+                <ItemGroupRef ItemGroupOID="IG.BCAEAdverse Event" OrderNumber="1" Mandatory="Yes"/>
+            </FormDef>
+            <ItemGroupDef OID="IG.BCAEAdverse Event" Name="Adverse Event Item Group" Purpose="C360 Biomedical Concept" Repeating="Yes">
+                <Description>
+                    <TranslatedText>Adverse Event</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEPTCD" OrderNumber="0" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESMIE" OrderNumber="1" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESDISAB" OrderNumber="2" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESTDAT" OrderNumber="3" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESLIFE" OrderNumber="4" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEDECOD" OrderNumber="5" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESEV" OrderNumber="6" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESCONG" OrderNumber="7" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLGTCD" OrderNumber="8" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AELLT" OrderNumber="9" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESER" OrderNumber="10" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEMODIFY" OrderNumber="11" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEOUT" OrderNumber="12" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESHOSP" OrderNumber="13" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AETERM" OrderNumber="14" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESDTH" OrderNumber="15" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESOD" OrderNumber="16" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLGT" OrderNumber="17" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLTCD" OrderNumber="18" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLT" OrderNumber="19" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEACN" OrderNumber="20" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AELLTCD" OrderNumber="21" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESCAN" OrderNumber="22" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+            </ItemGroupDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEPTCD" Name="AEPTCD" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Preferred Term Code</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEPTCD"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESMIE" Name="AESMIE" DataType="text" Length="8" mdr:Prompt="Other Serious (Important Medical Events)" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Other Medically Important Serious Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was the adverse event a medically important event not covered by other serious criteria?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event is an important medical event, which may be defined in the protocol or in the Investigator Brochure.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESDISAB" Name="AESDISAB" DataType="text" Length="8" mdr:Prompt="Disability or Permanent Damage" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Persist or Signif Disability/Incapacity</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Did the adverse event result in disability or permanent damage?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event resulted in a persistent or significant disability or incapacity.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESTDAT" Name="AESTDAT" DataType="text" Length="50" mdr:Prompt="Start Date" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Adverse Event Start Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the adverse event start date?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the start date of the AE using this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESLIFE" Name="AESLIFE" DataType="text" Length="8" mdr:Prompt="Life Threatening" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Is Life Threatening</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was the adverse event life threatening?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event is life threatening.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEDECOD" Name="AEDECOD" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Dictionary-Derived Term</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEDECOD"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESEV" Name="AESEV" DataType="text" Length="50" mdr:Prompt="Severity" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Severity/Intensity</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the severity of the adverse event?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66769"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>The reporting physician/healthcare professional will assess the severity of the event using the sponsor-defined categories. This assessment is subjective and the reporting physician/ healthcare professional should use medical judgment to compare the reported AE to similar type events observed in clinical practice. Severity is not equivalent to seriousness.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESCONG" Name="AESCONG" DataType="text" Length="8" mdr:Prompt="Congenital Anomaly or Birth Defect" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Congenital Anomaly or Birth Defect</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was the adverse event associated with a congenital anomaly or birth defect?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event was associated with congenital anomaly or birth defect.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLGTCD" Name="AEHLGTCD" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE High Level Group Term Code</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLGTCD"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AELLT" Name="AELLT" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Lowest Level Term Code</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AELLT"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESER" Name="AESER" DataType="text" Length="8" mdr:Prompt="Serious" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Serious Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was the adverse event serious?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Assess if an adverse event should be classified as serious based on the serious criteria defined in the protocol.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEMODIFY" Name="AEMODIFY" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Modified Reported Term</TranslatedText>
+                </Description>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEOUT" Name="AEOUT" DataType="text" Length="8" mdr:Prompt="Outcome" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Outcome of Adverse Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the outcome of this adverse event?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66768"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the appropriate outcome of the event in relation to the subject's status.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESHOSP" Name="AESHOSP" DataType="text" Length="8" mdr:Prompt="Hospitalization (initial or prolonged)" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Requires or Prolongs Hospitalization</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Did the adverse event result in initial or prolonged hospitalization for the subject?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event resulted in an initial or prolonged hospitalization.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AETERM" Name="AETERM" DataType="text" Length="8" mdr:Prompt="Adverse Event" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Reported Term for the Adverse Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the adverse event term?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record only 1 diagnosis, sign or symptom per line (e.g., nausea and vomiting should not be recorded in the same entry, but as 2 separate entries). Using accepted medical terminology, enter the diagnosis (if known); otherwise enter a sign or symptom.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESDTH" Name="AESDTH" DataType="text" Length="8" mdr:Prompt="Death" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Results in Death</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Did the adverse event result in death?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event resulted in death.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESOD" Name="AESOD" DataType="text" Length="8" mdr:Prompt="Overdose" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Occurred with Overdose</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Did the adverse event occur with an overdose?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event occurs with an overdose.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLGT" Name="AEHLGT" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE High Level Group Term</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLGT"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLTCD" Name="AEHLTCD" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE High Level Term Code</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLTCD"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEHLT" Name="AEHLT" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE High Level Term</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLT"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AEACN" Name="AEACN" DataType="text" Length="8" mdr:Prompt="Action Taken with Study Treatment" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Action Taken with Study Treatment</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What action was taken with study treatment?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66767"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record changes made to the study treatment resulting from the adverse event.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AELLTCD" Name="AELLTCD" DataType="text" Length="8" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>AE Lowest Level Term Code</TranslatedText>
+                </Description>
+                <CodeListRef CodeListOID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AELLTCD"/>
+            </ItemDef>
+            <ItemDef OID="IT.Adverse Event./mdr/cdashig/2-1/domains/AE/fields/AESCAN" Name="AESCAN" DataType="text" Length="8" mdr:Prompt="Cancer" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Involves Cancer</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was the adverse event associated with the development of cancer?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the serious adverse event was associated with development of cancer.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEPTCD" Name="MedDRA Preferred Term Code" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66742" Name="AESMIE" DataType="text">
+                <EnumeratedItem CodedValue="Y">
+                    <Alias Context="nci:ExtCodeID" Name="49488"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66742"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEDECOD" Name="MedDRA Preferred Term " DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66769" Name="AESEV" DataType="text">
+                <ExternalCodeList Dictionary="CDISC CT" Version="Most Recent" href="/mdr/root/ct/sdtmct/codelists/C66769"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLGTCD" Name="MedDRA High Level Group Term Code" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AELLT" Name="MedDRA Lowest Level Term" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66768" Name="AEOUT" DataType="text">
+                <EnumeratedItem CodedValue="AOUT">
+                    <Alias Context="nci:ExtCodeID" Name="66768"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66768"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLGT" Name="MedDRA High Level Group Term" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLTCD" Name="MedDRA High Level Term Code" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AEHLT" Name="MedDRA High Level Term" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66767" Name="AEACN" DataType="text">
+                <EnumeratedItem CodedValue="AEACN">
+                    <Alias Context="nci:ExtCodeID" Name="66767"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66767"/>
+            </CodeList>
+            <CodeList OID="C360.CL./mdr/cdashig/2-1/domains/AE/fields/AELLTCD" Name="MedDRA Lowest Level Term Code" DataType="text">
+                <ExternalCodeList Dictionary="MedDRA" Version="Most Recent"/>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>

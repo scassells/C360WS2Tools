@@ -1,0 +1,188 @@
+<?xml version="1.0" ?>
+<ODM xmlns:mdr="https://www.cdisc.org/ns/mdr/c360" xmlns="http://www.cdisc.org/ns/odm/v1.3" CreationDateTime="2020-08-19T16:28:05.912197" FileOID="[CDISC LIBRARY- cdashig-2-1]" FileType="Snapshot">
+    <Study OID="[C360.Library.Example.cdashig-2-1]">
+        <GlobalVariables>
+            <StudyName>DS CDISC 360 Data Collection Requirements</StudyName>
+            <StudyDescription>CLIB BC Examples</StudyDescription>
+            <ProtocolName>C360 WS1 BC Listing</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="CDISCLIB.cdashig-2-1" Name="CDISC 360 Library MetaData" Description="cdashig-2-1">
+            <FormDef OID="FRM.BCDSProtocol Milestone" Name="Protocol Milestone Form" Repeating="Yes">
+                <ItemGroupRef ItemGroupOID="IG.BCDSProtocol Milestone" OrderNumber="1" Mandatory="Yes"/>
+            </FormDef>
+            <FormDef OID="FRM.BCDSDispositionEvent" Name="DispositionEvent Form" Repeating="Yes">
+                <ItemGroupRef ItemGroupOID="IG.BCDSDispositionEvent" OrderNumber="1" Mandatory="Yes"/>
+            </FormDef>
+            <ItemGroupDef OID="IG.BCDSProtocol Milestone" Name="Protocol Milestone Item Group" Purpose="C360 Biomedical Concept" Repeating="Yes">
+                <Description>
+                    <TranslatedText>DSCAT EQ PROTOCOL_MILESTONE</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSTERM" OrderNumber="0" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSDECOD" OrderNumber="1" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSCAT" OrderNumber="2" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSSTDAT" OrderNumber="3" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSSTTIM" OrderNumber="4" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.BCDSDispositionEvent" Name="DispositionEvent Item Group" Purpose="C360 Biomedical Concept" Repeating="Yes">
+                <Description>
+                    <TranslatedText>DSCAT EQ DISPOSITION_EVENT</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSSTDAT" OrderNumber="0" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSSTTIM" OrderNumber="1" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSTERM" OrderNumber="2" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSCAT" OrderNumber="3" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/EPOCH" OrderNumber="4" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSDECOD" OrderNumber="5" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+            </ItemGroupDef>
+            <ItemDef OID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSTERM" Name="DSTERM" DataType="text" Length="8" mdr:Prompt="[Status]; [Specify]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Reported Term for the Disposition Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the subject's status?; If [DSDECOD], specify</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Document the subject's status at [insert text corresponding to the selected trial epoch]. If the subject discontinued prematurely, record the primary reason for discontinuation. (Or, if used with a DECOD list), if Other is selected from the Status list, provide the verbatim reason.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSDECOD" Name="DSDECOD" DataType="text" Length="8" mdr:Prompt="Status (at the EPOCH/study specific time frame)" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Standardized Disposition Term</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the subject's status (at the EPOCH/study specific time frame)?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66727"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Document the subject's status at [insert text corresponding to the selected trial epoch/study specific time frame]. If the subject discontinued prematurely, record the primary reason for discontinuation.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSCAT" Name="DSCAT" DataType="text" Length="8" mdr:Prompt="[Disposition Category]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Category for Disposition Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the category of the disposition?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C74558"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>If collected on the CRF, the sponsor provides instructions to ensure the data is entered as intended.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSSTDAT" Name="DSSTDAT" DataType="text" Length="50" mdr:Prompt="[Protocol Milestone/Disposition Event/Other Event Name] Date" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Disposition Event Start Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the [protocol milestone/disposition event/other event name] date?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the date of [protocol milestone/disposition event] as defined in the protocol and/or CRF Completion Instructions using this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Protocol Milestone./mdr/cdashig/2-1/domains/DS/fields/DSSTTIM" Name="DSSTTIM" DataType="text" Length="50" mdr:Prompt="[Protocol Milestone/Disposition Event/Other Event Name] Time" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Disposition Event Start Time</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the [protocol milestone/disposition event/other event name] time?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the time (as complete as possible) that the subject completed the study or portion of the study as defined in the protocol and/or CRF Completion Instructions. If the subject did not complete the study or portion of the study, record the time (as complete as possible) as defined in the protocol and/or CRF Completion Instructions.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSSTDAT" Name="DSSTDAT" DataType="text" Length="50" mdr:Prompt="[Protocol Milestone/Disposition Event/Other Event Name] Date" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Disposition Event Start Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the [protocol milestone/disposition event/other event name] date?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the date of [protocol milestone/disposition event] as defined in the protocol and/or CRF Completion Instructions using this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSSTTIM" Name="DSSTTIM" DataType="text" Length="50" mdr:Prompt="[Protocol Milestone/Disposition Event/Other Event Name] Time" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Disposition Event Start Time</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the [protocol milestone/disposition event/other event name] time?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the time (as complete as possible) that the subject completed the study or portion of the study as defined in the protocol and/or CRF Completion Instructions. If the subject did not complete the study or portion of the study, record the time (as complete as possible) as defined in the protocol and/or CRF Completion Instructions.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSTERM" Name="DSTERM" DataType="text" Length="8" mdr:Prompt="[Status]; [Specify]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Reported Term for the Disposition Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the subject's status?; If [DSDECOD], specify</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Document the subject's status at [insert text corresponding to the selected trial epoch]. If the subject discontinued prematurely, record the primary reason for discontinuation. (Or, if used with a DECOD list), if Other is selected from the Status list, provide the verbatim reason.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSCAT" Name="DSCAT" DataType="text" Length="8" mdr:Prompt="[Disposition Category]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Category for Disposition Event</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the category of the disposition?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C74558"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>If collected on the CRF, the sponsor provides instructions to ensure the data is entered as intended.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/EPOCH" Name="EPOCH" DataType="text" Length="8" mdr:Prompt="Trial Period" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Epoch</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the trial period for this disposition event?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C99079"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Check the [epoch, or insert more appropriate wording] for which disposition is being recorded.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.DispositionEvent./mdr/cdashig/2-1/domains/DS/fields/DSDECOD" Name="DSDECOD" DataType="text" Length="8" mdr:Prompt="Status (at the EPOCH/study specific time frame)" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Standardized Disposition Term</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the subject's status (at the EPOCH/study specific time frame)?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66727"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Document the subject's status at [insert text corresponding to the selected trial epoch/study specific time frame]. If the subject discontinued prematurely, record the primary reason for discontinuation.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66727" Name="DSDECOD" DataType="text">
+                <EnumeratedItem CodedValue="RANDOMIZED"/>
+                <EnumeratedItem CodedValue="INFORMED CONSENT OBTAINED"/>
+                <Alias Context="nci:ExtCodeID" Name="C66727"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C74558" Name="DSCAT" DataType="text">
+                <EnumeratedItem CodedValue="PROTOCOL MILESTONE">
+                    <Alias Context="nci:ExtCodeID" Name="74588"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C74558"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C99079" Name="EPOCH" DataType="text">
+                <EnumeratedItem CodedValue="SCREENIING">
+                    <Alias Context="nci:ExtCodeID" Name="48262"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="TREATMENT">
+                    <Alias Context="nci:ExtCodeID" Name="101526"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="FOLLOW-UP">
+                    <Alias Context="nci:ExtCodeID" Name="99158"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C99079"/>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>

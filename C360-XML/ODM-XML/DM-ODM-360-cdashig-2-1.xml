@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<ODM xmlns:mdr="https://www.cdisc.org/ns/mdr/c360" xmlns="http://www.cdisc.org/ns/odm/v1.3" CreationDateTime="2020-08-19T12:10:30.855300" FileOID="[CDISC LIBRARY- cdashig-2-1]" FileType="Snapshot">
+    <Study OID="[C360.Library.Example.cdashig-2-1]">
+        <GlobalVariables>
+            <StudyName>DM CDISC 360 Data Collection Requirements</StudyName>
+            <StudyDescription>CLIB BC Examples</StudyDescription>
+            <ProtocolName>C360 WS1 BC Listing</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="CDISCLIB.cdashig-2-1" Name="CDISC 360 Library MetaData" Description="cdashig-2-1">
+            <FormDef OID="FRM.BCDMSubject (C70665)" Name="Subject (C70665) Form" Repeating="No">
+                <ItemGroupRef ItemGroupOID="IG.BCDMSubject (C70665)" OrderNumber="1" Mandatory="Yes"/>
+            </FormDef>
+            <ItemGroupDef OID="IG.BCDMSubject (C70665)" Name="Subject (C70665) Item Group" Purpose="C360 Biomedical Concept" Repeating="Yes">
+                <Description>
+                    <TranslatedText>Subject (C70665)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/ETHNIC" OrderNumber="0" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/RACE" OrderNumber="1" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/SUBJID" OrderNumber="2" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/STUDYID" OrderNumber="3" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/AGE" OrderNumber="4" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/SEX" OrderNumber="5" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/SITEID" OrderNumber="6" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/BRTHDAT" OrderNumber="7" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/BRTHTIM" OrderNumber="8" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/AGEU" OrderNumber="9" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/DMDAT" OrderNumber="10" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+            </ItemGroupDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/ETHNIC" Name="ETHNIC" DataType="text" Length="8" mdr:Prompt="Ethnicity" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Ethnicity</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Do you consider yourself Hispanic/Latino or not Hispanic/Latino?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66790"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Study participants should self-report ethnicity, with ethnicity being asked about before race.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/RACE" Name="RACE" DataType="text" Length="8" mdr:Prompt="Race" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Race</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Which of the following five racial designations best describes you? (More than one choice is acceptable.)</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C74457"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Study participants should self-report race, with race being asked about after ethnicity.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/SUBJID" Name="SUBJID" DataType="text" Length="8" mdr:Prompt="[Subject/Participant] (Identifier)" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Subject Identifier for the Study</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What [is/was] the (study) [subject/participant] identifier?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the identifier for the subject.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/STUDYID" Name="STUDYID" DataType="text" Length="8" mdr:Prompt="[Protocol/Study]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Study Identifier</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the study identifier?</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/AGE" Name="AGE" DataType="float" Length="8" SignificantDigits="3" mdr:Prompt="Age" mdr:SimpleType="float" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Age</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the subject's age?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record age of the subject.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/SEX" Name="SEX" DataType="text" Length="8" mdr:Prompt="Sex" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Sex</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the sex of the subject?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66731"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the appropriate sex (e.g., F (female), M (male).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/SITEID" Name="SITEID" DataType="text" Length="8" mdr:Prompt="Site (Identifier)" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Study Site Identifier</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the site identifier?</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/BRTHDAT" Name="BRTHDAT" DataType="text" Length="50" mdr:Prompt="Birth Date" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Birth Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the subject's date of birth?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the date of birth to the level of precision known (e.g., day/month/year, year, month/year, etc.) in this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/BRTHTIM" Name="BRTHTIM" DataType="text" Length="50" mdr:Prompt="Birth Time" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Birth Time</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the subject's time of birth?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the time of birth (as completely as possible).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/AGEU" Name="AGEU" DataType="text" Length="8" mdr:Prompt="Age Unit" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Age Units</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the age unit used?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66781"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the appropriate age unit (e.g., YEARS, MONTHS, WEEKS, etc.).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.Subject (C70665)./mdr/cdashig/2-1/domains/DM/fields/DMDAT" Name="DMDAT" DataType="text" Length="50" mdr:Prompt="Collection Date" mdr:SimpleType="Char" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Demographics Collection Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What is the date of collection?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the date of collection using this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66790" Name="ETHNIC" DataType="text">
+                <EnumeratedItem CodedValue="Ethnicity">
+                    <Alias Context="nci:ExtCodeID" Name="66790"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66790"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C74457" Name="RACE" DataType="text">
+                <EnumeratedItem CodedValue="Race">
+                    <Alias Context="nci:ExtCodeID" Name="74457"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C74457"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66731" Name="SEX" DataType="text">
+                <EnumeratedItem CodedValue="Sex">
+                    <Alias Context="nci:ExtCodeID" Name="66731"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66731"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66781" Name="AGEU" DataType="text">
+                <EnumeratedItem CodedValue="Age Units">
+                    <Alias Context="nci:ExtCodeID" Name="66781"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66781"/>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>

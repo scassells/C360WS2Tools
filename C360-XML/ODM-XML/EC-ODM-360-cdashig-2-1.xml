@@ -1,0 +1,333 @@
+<?xml version="1.0" ?>
+<ODM xmlns:mdr="https://www.cdisc.org/ns/mdr/c360" xmlns="http://www.cdisc.org/ns/odm/v1.3" CreationDateTime="2020-08-18T18:21:42.063889" FileOID="[CDISC LIBRARY- cdashig-2-1]" FileType="Snapshot">
+    <Study OID="[C360.Library.Example.cdashig-2-1]">
+        <GlobalVariables>
+            <StudyName>EC CDISC 360 Data Collection Requirements</StudyName>
+            <StudyDescription>CLIB BC Examples</StudyDescription>
+            <ProtocolName>C360 WS1 BC Listing</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="CDISCLIB.cdashig-2-1" Name="CDISC 360 Library MetaData" Description="cdashig-2-1">
+            <FormDef OID="FRM.BCECECTRT" Name="ECTRT Form" Repeating="Yes">
+                <ItemGroupRef ItemGroupOID="IG.BCECECTRT" OrderNumber="1" Mandatory="Yes"/>
+            </FormDef>
+            <ItemGroupDef OID="IG.BCECECTRT" Name="ECTRT Item Group" Purpose="C360 Biomedical Concept" Repeating="Yes">
+                <Description>
+                    <TranslatedText>ECTRT-Human Insulin</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECLAT" OrderNumber="0" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECTRT" OrderNumber="1" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDIR" OrderNumber="2" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECOCCUR" OrderNumber="3" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECADJ" OrderNumber="4" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECENDAT" OrderNumber="5" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECROUTE" OrderNumber="6" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECSTTIM" OrderNumber="7" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSFRM" OrderNumber="8" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECFAST" OrderNumber="9" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSRGM" OrderNumber="10" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSFRQ" OrderNumber="11" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECENTIM" OrderNumber="12" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECSTDAT" OrderNumber="13" Mandatory="Yes" mdr:Core="HR" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECLOT" OrderNumber="14" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDSTXT" OrderNumber="15" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECMOOD" OrderNumber="16" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECLOC" OrderNumber="17" Mandatory="No" mdr:Core="O" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+                <ItemRef ItemOID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSU" OrderNumber="18" Mandatory="Yes" mdr:Core="R/C" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360"/>
+            </ItemGroupDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECLAT" Name="ECLAT" DataType="text" Length="8" mdr:Prompt="Side" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Laterality</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the side of the anatomical location of the ([study treatment/dose]) administration?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C99073"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the side of the body location where the study treatment was administered (e.g., Left, Right).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECTRT" Name="ECTRT" DataType="text" Length="8" mdr:Prompt="[Study Treatment/Investigational Product Name]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Treatment</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the [study treatment/investigational product] name?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the name of study treatment.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDIR" Name="ECDIR" DataType="text" Length="8" mdr:Prompt="Directionality" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Directionality</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the directionality of the anatomical location of the ([study treatment/dose]) administration?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C99074"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the directionality of the body location where the study treatment was administered (e.g., Anterior, Lower, Proximal, Upper).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECOCCUR" Name="ECOCCUR" DataType="text" Length="8" mdr:Prompt="[Study Medication/Treatment]" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Occurrence</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was [study treatment/dose] administered?; Has the subject taken [study treatment/dose]?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Indicate if the subject took study treatment. If Yes, include the appropriate details where indicated.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECADJ" Name="ECADJ" DataType="text" Length="8" mdr:Prompt="Reason Adjusted" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Reason for Dose Adjustment</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the reason the dose was adjusted?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>If there was a change in dosing, record the reason for change.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECENDAT" Name="ECENDAT" DataType="text" Length="8" mdr:Prompt="(End) Date" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected End Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the ([intended/planned/actual]) ([study treatment/dose]) (end) date?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the end date of the study treatment administration using this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECROUTE" Name="ECROUTE" DataType="text" Length="8" mdr:Prompt="Route" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>EC Route of Administration</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the route of administration (of the [study treatment/dose])?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66729"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the route of administration (e.g., IV, ORAL, TRANSDERMAL) or enter the appropriate code from the code list.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECSTTIM" Name="ECSTTIM" DataType="text" Length="8" mdr:Prompt="(Start) Time" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Start Time</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the ([intended/planned/actual]) ([study treatment/dose]) (start) time?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the start time (as complete as possible) when administration of study treatment started.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSFRM" Name="ECDOSFRM" DataType="text" Length="8" mdr:Prompt="Dose Form" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Dose Form</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the dose form of the [study treatment/dose]?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66726"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the dose form (e.g., SOLUTION, TABLET, LOTION) or enter the appropriate code from the code list.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECFAST" Name="ECFAST" DataType="text" Length="8" mdr:Prompt="Fasting" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Fasting Status</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Was the subject fasting?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C66742"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record whether the subject was fasting prior to the study treatment being taken.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSRGM" Name="ECDOSRGM" DataType="text" Length="8" mdr:Prompt="Intended Dose Regimen" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Intended Dose Regimen</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the intended dose regimen?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the regimen for the study medication.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSFRQ" Name="ECDOSFRQ" DataType="text" Length="8" mdr:Prompt="Frequency" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>EC Dosing Frequency per Interval</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the frequency of [study treatment/dose] dosing?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C71113"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the frequency the study treatment was administered for a defined period of time (e.g., BID, QID, TID).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECENTIM" Name="ECENTIM" DataType="text" Length="8" mdr:Prompt="(End) Time" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected End Time</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the ([intended/planned/actual]) ([study treatment/dose]) (end) time?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the time, (as complete as possible) when study treatment administration stopped (e.g., for infusions this is the time when the infusion ended).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECSTDAT" Name="ECSTDAT" DataType="text" Length="8" mdr:Prompt="(Start) Date" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Start Date</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the ([intended/planned/actual]) ([study treatment/dose]) (start) date?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the start date of the study treatment administration using this format (DD-MON-YYYY).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECLOT" Name="ECLOT" DataType="text" Length="8" mdr:Prompt="Lot Number" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Lot Number</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the lot number of the[study treatment/dose] used?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the lot number that appears on the container holding the study treatment.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDSTXT" Name="ECDSTXT" DataType="text" Length="8" mdr:Prompt="Dose" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Dose Description</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the dose (per administration) (of [study treatment/dose])?</TranslatedText>
+                </Question>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the dose or amount of study treatment that was administered to/taken by the subject in the period recorded; from the start date/time to the end date/time inclusive.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECMOOD" Name="ECMOOD" DataType="text" Length="8" mdr:Prompt="Scheduled/Performed" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Mood</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>Does this record describe scheduled [study treatment/dose] or performed [study treatment/dose]?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C125923"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Indicate if this record has happened or is intended to happen.</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECLOC" Name="ECLOC" DataType="text" Length="8" mdr:Prompt="Anatomical Location" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>EC Location of Dose Administration</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What was the anatomical location of the ([study treatment/dose]) administration?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C74456"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the body location where the study treatment was administered (e.g., SHOULDER, HIP, ARM).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <ItemDef OID="IT.ECTRT./mdr/cdashig/2-1/domains/EC/fields/ECDOSU" Name="ECDOSU" DataType="text" Length="8" mdr:Prompt="Units" mdr:SimpleType="text" xmlns:mdr="https://www.cdisc.org/ns/mdr/c360">
+                <Description>
+                    <TranslatedText>Exposure as Collected Dose Units</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText>What were the units for the dose?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL./mdr/root/ct/sdtmct/codelists/C71620"/>
+                <mdr:CompletionInstructions>
+                    <TranslatedText>Record the unit of dose or amount taken per period recorded (e.g., ng, mg, mg/kg).</TranslatedText>
+                </mdr:CompletionInstructions>
+            </ItemDef>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C99073" Name="ECLAT" DataType="text">
+                <EnumeratedItem CodedValue="RIGHT">
+                    <Alias Context="nci:ExtCodeID" Name="25228"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="LEFT">
+                    <Alias Context="nci:ExtCodeID" Name="25229"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C99073"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C99074" Name="ECDIR" DataType="text">
+                <EnumeratedItem CodedValue="UPPER">
+                    <Alias Context="nci:ExtCodeID" Name="25355"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C99074"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66742" Name="ECOCCUR" DataType="text">
+                <EnumeratedItem CodedValue="N">
+                    <Alias Context="nci:ExtCodeID" Name="49487"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="Y">
+                    <Alias Context="nci:ExtCodeID" Name="49488"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66742"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66729" Name="ECROUTE" DataType="text">
+                <EnumeratedItem CodedValue="SUBCUTANEOUS">
+                    <Alias Context="nci:ExtCodeID" Name="38299"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66729"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C66726" Name="ECDOSFRM" DataType="text">
+                <EnumeratedItem CodedValue="INJECTION">
+                    <Alias Context="nci:ExtCodeID" Name="42946"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C66726"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C71113" Name="ECDOSFRQ" DataType="text">
+                <EnumeratedItem CodedValue="BID">
+                    <Alias Context="nci:ExtCodeID" Name="64496"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="QD">
+                    <Alias Context="nci:ExtCodeID" Name="25473"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="QOD">
+                    <Alias Context="nci:ExtCodeID" Name="64525"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C71113"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C125923" Name="ECMOOD" DataType="text">
+                <EnumeratedItem CodedValue="SCHEDULED">
+                    <Alias Context="nci:ExtCodeID" Name="125937"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="PERFORMED">
+                    <Alias Context="nci:ExtCodeID" Name="38000"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C125923"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C74456" Name="ECLOC" DataType="text">
+                <EnumeratedItem CodedValue="ARM">
+                    <Alias Context="nci:ExtCodeID" Name="32141"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="THIGH">
+                    <Alias Context="nci:ExtCodeID" Name="33763"/>
+                </EnumeratedItem>
+                <EnumeratedItem CodedValue="ABDOMINAL REGION">
+                    <Alias Context="nci:ExtCodeID" Name="139186"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C74456"/>
+            </CodeList>
+            <CodeList OID="CL./mdr/root/ct/sdtmct/codelists/C71620" Name="ECDOSU" DataType="text">
+                <EnumeratedItem CodedValue="U/mL">
+                    <Alias Context="nci:ExtCodeID" Name="77607"/>
+                </EnumeratedItem>
+                <Alias Context="nci:ExtCodeID" Name="C71620"/>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>
