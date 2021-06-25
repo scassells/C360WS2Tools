@@ -1,0 +1,58 @@
+{
+  "node_types": [
+    {
+      "name": "root_concept",
+      "border_color": "255,0,0,255",
+      "label": "Observation Concept",
+      "target_links": ["hasDEC", "hasObservationConcept"],
+      "source_links": ["hasObservationConcept"],
+      "node_color": "#FF0000"
+    },
+    {
+      "name": "dec",
+      "border_shape": "rectangle",
+      "background_color": "255,255,150,255",
+      "label": "Data Element Concept",
+      "target_links": ["hasCD", "hasDEC"],
+      "source_links": ["hasDEC", "hasDerivation"],
+      "node_color": "#FFFF00"
+    },
+    {
+      "name": "codelist",
+      "border_shape": "rectangle",
+      "background_color": "200,150,255,255",
+      "label": "Codelist",
+      "target_links": [],
+      "source_links": ["isSubsetOf"],
+      "node_color": "#800080"
+    },
+    {
+      "name": "cd",
+      "border_shape": "rectangle",
+      "background_color": "0,255,0,255",
+      "label": "Conceptual Domain",
+      "target_links": ["isSubsetOf"],
+      "source_links": ["hasCD"],
+      "node_color": "#00FF00"
+    },
+    {
+      "name": "method",
+      "border_color": "0,0,255,255",
+      "label": "Method",
+      "target_links": [],
+      "source_links": ["hasDerivation"],
+      "node_color": "#0000FF"
+    }
+  ],
+  "skip_concept_labels": [ "-", "--"],
+  "graphml_file_name": "cmap_graph.graphml",
+  "report_file_name": "cmap_report.xlsx",
+  "json_tree_file_name": "tree_cmap_graph.json",
+  "json_force_file_name": "force_cmap_graph.json",
+  "report_node_headers": [
+    "Name", "Type", "Id", "Is Orphan?", "Is Entry Point?", "Source Node Count", "Target Node Count", "Invalid Links"
+  ],
+  "report_edge_headers": [
+    "Name", "Count"
+  ]
+}
